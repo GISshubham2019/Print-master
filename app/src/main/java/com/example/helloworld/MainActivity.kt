@@ -9,13 +9,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // Setting up a simple layout programmatically for testing Print Master
         val layout = android.widget.LinearLayout(this).apply {
             orientation = android.widget.LinearLayout.VERTICAL
             setPadding(50, 100, 50, 50)
         }
 
-        // Title text
         val title = android.widget.TextView(this).apply {
             text = "Print Master (Android 14)"
             textSize = 24f
@@ -23,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         }
         layout.addView(title)
 
-        // Print Aadhaar Button
         val aadhaarButton = Button(this).apply {
             text = "🪪 Print Aadhaar Card"
             setOnClickListener {
@@ -32,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         }
         layout.addView(aadhaarButton)
 
-        // Print Now Button
         val printButton = Button(this).apply {
             text = "🖨️ Print Now (B&W / A4)"
             setOnClickListener {
